@@ -64,3 +64,42 @@ function validAnagram2(str1, str2) {
 
     return true
 }
+
+
+
+// practice
+function sameFrequency(num1, num2) {
+    // convert each number to a string
+    let str1 = num1.toString();
+    let str2 = num2.toString();
+
+    // if strings are of different length, they can not match
+    if (str1.length !== str2.length) return false
+
+    // create object to store frequencies of digits
+    const lookup = {}
+
+    // iterate over str1
+    for (let digit of str1) {
+        // increment digite frequency in obj if exists, else add digit to obj with value of 1
+        lookup[digit] = (lookup[digit] || 0) + 1
+    }
+
+    // iterate over str2
+    for (let digit of str2) {
+        // if digit is not in lookup or has value of 0, return false
+        if (!lookup[digit]) {
+            return false
+        }
+
+        // else decrement value of digit in lookup
+        lookup[digit] -= 1
+    }
+
+    return true
+}
+
+console.log(sameFrequency(182, 281))
+console.log(sameFrequency(34, 14))
+console.log(sameFrequency(3589578, 5879385))
+console.log(sameFrequency(22, 222))
