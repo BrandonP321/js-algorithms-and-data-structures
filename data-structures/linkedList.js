@@ -119,7 +119,7 @@ class SinglyLinkedList {
     }
 
     insert(index, value) {
-        // if there is no head or index is greater than or equal to length, return false
+        // if index is less than 0 or greater than or equal to length, return false
         if (index < 0 || index > this.length) return false
 
         // if index is same as length, push new node to list
@@ -168,23 +168,22 @@ class SinglyLinkedList {
 
             return nodeToRemove.val
         }
-
     }
     
-    reverse() {
-        // set current head to the tail
-        this.tail = this.head
-        this.tail.next = null
+    // reverse() {
+    //     // set current head to the tail
+    //     this.tail = this.head
+    //     this.tail.next = null
         
-        let prevNode
-        let currentNode
-        let nextNode
+    //     let prevNode
+    //     let currentNode
+    //     let nextNode
         
-        // iterate through all items in array starting at second item
-        for (let i = 1; i < this.length; i++) {
+    //     // iterate through all items in array starting at second item
+    //     for (let i = 1; i < this.length; i++) {
             
-        }
-    }
+    //     }
+    // }
 
     print() {
         let arr = [];
