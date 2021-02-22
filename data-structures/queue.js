@@ -45,8 +45,10 @@ class Queue {
             nodeToRemove.next = null;
         }
 
-        // decrement and return size
-        return ++this.size
+        // decrement size
+        this.size--
+
+        return nodeToRemove.value
     }
 
     print() {
@@ -63,14 +65,16 @@ class Queue {
 }
 
 
-let myQueue = new Queue()
+// let myQueue = new Queue()
 
-myQueue.enqueue(5)
-myQueue.enqueue(1)
-myQueue.enqueue(99)
-myQueue.enqueue(103)
+// myQueue.enqueue(5)
+// myQueue.enqueue(1)
+// myQueue.enqueue(99)
+// myQueue.enqueue(103)
 
-myQueue.dequeue()
+// myQueue.dequeue()
 
-console.log(myQueue)
-console.log(myQueue.print())
+// console.log(myQueue)
+// console.log(myQueue.print())
+
+module.exports = Queue;
